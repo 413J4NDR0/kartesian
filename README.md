@@ -11,7 +11,14 @@ You can visit the example here: [Summer 2017 Syrian Refugee Map](https://ortega-
 
 This was my first time working with JavaScript, but I spent a significant amount of time in the final weeks of the project refactoring the code for generalizability and would like to continue that work now. 
 
+Admittedly, this work was inspired by amCharts, although I take a different approach that emphasizes data visualization; if you are looking for a production ready chart mapping software you should check there library.
+
 ## To-Do
 * Migrate the SVG handler from Raphaël JS to the newer Snap SVG 
 * Use a database backend for information from a particular country
 * General Refactoring
+
+## Libraries
+* JQuery
+* Raphaël (will be migrated to Snap SVG at some point)
+* Velocity
