@@ -11,7 +11,7 @@ You can visit the example here: [Summer 2017 Syrian Refugee Map](https://ortega-
 
 This was my first time working with JavaScript, but I spent a significant amount of time in the final weeks of the project refactoring the code for generalizability and would like to continue that work now. 
 
-Admittedly, this work was inspired by amCharts, although I take a different approach that emphasizes data visualization; if you are looking for a production ready chart mapping software you should check there library.
+Admittedly, this work was inspired by limitations I found using amCharts JS and Leaflet JS, as I take a different approach that emphasizes data visualization and a different aesthetic; if you are looking for a production ready chart mapping software you should check those libraries.
 
 ## To-Do
 * Migrate the SVG handler from Raphaël JS to the newer Snap SVG 
