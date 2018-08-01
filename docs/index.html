@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <title>DynamicMap</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1" >
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="https://ortega-alejandro.github.io">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()"><i class="fas fa-bars"></i></a>
+    </div>
+    <div class="col-12" style="background-color: #6c6c71; min-height: 95vh">
+        <h1 style="color: white">Dynamic Map Example</h1>
+    </div>
+    <div class="footer col-12" style="padding:unset">
+        <div class="col-12" style="padding-top: 1.5%; padding-bottom: 3%">
+            <div class="col-5"> 
+                <h2 style="padding-left: unset">Follow Me</h2>
+                <h3 style="padding-left: 1%">
+                    <a href="https://github.com/ortega-alejandro" target="_blank" style="color: white; text-decoration: none">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alejandro-ortega-10373710b/" target="_blank" style="color: white; text-decoration: none">
+                        <i class="fab fa-linkedin fa-2x" style="margin-left: 10px"></i>
+                    </a>
+                    <a href="https://www.kaggle.com/ctrlxxx" target="_blank" style="color: white; text-decoration: none">
+                        <i class="fab fa-kaggle fa-2x" style="margin-left: 10px"></i>
+                    </a>
+                </h3>
+            </h2>
+                
+            </div>
+            <div class="col-7">
+                <h2 style="padding-left: unset">Contact</h2>
+                <h3 style="margin-bottom: 1% !important; padding-left: unset"><i class="far fa-envelope"></i> Email</h3>
+                <a style="color: white; text-decoration: none" href="mailto:ortegaalejandro55@gmail.com">ortegaalejandro55@gmail.com </a>
+            </div>
+        </div>
+        <div class="col-12" >
+            <div class="center" >&copy; Alejandro Ortega, 2018. All Rights Reserved</div>
+        </div>
+    </div>
+    <script>
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

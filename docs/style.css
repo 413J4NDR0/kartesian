@@ -1,0 +1,87 @@
+﻿body,html{background-color:#fefdfb;margin:0;font-family:Source Sans Pro,Helvetica,sans-serif;color:#000;-webkit-font-smoothing:antialiased;letter-spacing:.1px}
+.link{color:#8b0000;text-decoration:none}
+a {text-decoration: none; color: inherit;}
+h2, h1, h3{padding-left:7.5%}
+.details{padding-left: 7.5%; }
+::selection{background:#B1B7D1;}
+.post-card:hover{background-color: #8b0000; color: white}
+@media screen and (max-width:975px){
+.post-card{width: 100% !important}
+.text{font-size: .75rem !important}
+body, .navbar a {font-size: .75rem !important}
+.logo,#syria{display:none}
+.backgroundImage{height: 300px !important; min-height: unset !important}
+div.footer,div.info{font-size: .75rem !important}
+div.footer a{font-size: .63rem !important;}
+#bayarea{width:175px!important; height: auto !important;}
+#pew,div.navbar #surv,div.navbar div,div.navbar div.dropdown div *{display:none}
+div.navbar a.mobileMenu{display:block}
+div.col-12 p.warning{display:block}
+div.navbar a:not(:first-child){display:none}
+div.navbar a.icon{float:right;display:block}
+div.navbar.responsive{position:relative}
+div.navbar.responsive a.icon{position:absolute;right:0;top:0}
+div.navbar.responsive a{float:none;display:block;text-align:left}
+}
+.container {position: relative;text-align: left;color: white;}
+.name {position: relative;}
+.position {position: relative;top: 7.5%;}
+.about {position: relative;top: 10%;}
+.navbar .icon{display:none;color:#fff}
+.warning{display:none}
+.mobileMenu{display:none}
+.info {position: absolute; top: 5%;left: 5%; ;background-color: rgba(99, 0, 0, .75);padding: 1%; margin-right: 5%; border-radius: 7.5px;-webkit-animation-name:fade;-webkit-animation-duration:3.5s;animation-name:fade;animation-duration:3.5s;}
+blockquote.text{font-size:24px}
+*{box-sizing:border-box}
+.col-1{width:8.33%}
+.col-2{width:16.66%}
+.col-3{width:25%}
+.col-4{width:33.33%}
+.col-5{width:41.66%}
+.col-6{width:50%}
+.col-7{width:58.33%}
+.col-8{width:66.66%}
+.col-9{width:75%}
+.col-10{width:83.33%}
+.col-11{width:91.66%}
+.col-12{width:100%}
+[class*=col-]{float:left;padding:15px}
+.row::after{content:"";clear:both;display:table}
+#profile{border-radius:50%;width:175px}
+#bayarea{width:425px}
+.center{margin:auto;display:block;width:fit-content; width: -moz-fit-content}
+.center img{box-shadow:0 6px 12px 0 rgba(0,0,0,.4);border-radius:5px}
+.navbar{overflow:hidden;background-color:#2f3f4f;overflow:hidden;padding-left:10%}
+.logo{float:left;padding:14px 14px}
+.navbar a{float:left;color:#fff;text-align:center;text-decoration:none;padding:14px 16px;font-size:17px}
+.navbar .dropWrap:hover,.navbar a:hover{background-color:#ddd;color:#000}
+.navbar div{font-size:17px}
+.dropdown .dropWrap{border:none;outline:0;padding:14px 16px;background-color:inherit;color:#fff;font-size:16px;border:none;cursor:pointer}
+.dropdown{float:left;overflow:hidden}
+.dropdown-content{display:none;position:absolute;background-color:#f9f9f9;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:1}
+.dropdown-content a{float:none;font-size:16px;color:#000;padding:8px 12px;text-decoration:none;display:block;text-align:left}
+.dropdown-content a:hover{background-color:#f1f1f1}
+.dropdown:hover .dropdown-content{display:block}
+.backgroundImage{background-image:url(img/background/laborDeReyes.jpg);height:95vh;background-position:50% 55%;background-repeat:no-repeat;background-size:cover;box-shadow:0 6px 12px 0 rgba(0,0,0,.4);-webkit-animation-name:fade;-webkit-animation-duration:1.5s;animation-name:fade;animation-duration:1.5s;}
+.text{text-align:justify;padding-left:10%;padding-right:10%;line-height:150%;font-size:1rem; margin-top: 1.25%;}
+.modal{display:none;position:fixed;z-index:1;padding-top:100px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:#000;background-color:rgba(0,0,0,.9)}
+.modal-content{margin:auto;display:block;width:80%;max-width:700px}
+#caption,.modal-content{-webkit-animation-name:zoom;-webkit-animation-duration:.6s;animation-name:zoom;animation-duration:.6s}
+@-webkit-keyframes zoom{
+from{-webkit-transform:scale(0)}
+to{-webkit-transform:scale(1)}
+}
+@keyframes zoom{
+from{transform:scale(0)}
+to{transform:scale(1)}
+}
+.footer{background-color:#2f3f4f;color:#fff;padding:unset;padding-top:1.5%;padding-right:1.5%;padding-bottom:.75%}
+Fading animation .fade{-webkit-animation-name:fade;-webkit-animation-duration:1.5s;animation-name:fade;animation-duration:1.5s}
+@-webkit-keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
