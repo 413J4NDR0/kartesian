@@ -1,3 +1,6 @@
+var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c0909', '#790a0a', '#870c0c', 
+'#932424', '#9f3c3c', '#ab5454', '#b76d6d', '#c38585', '#cf9d9d', '#dbb6b6', '#e7cece', '#e7cece'];
+
 function main(regions, jsonData) {
     normalize(regions, jsonData);
     for (var j = 0; j < regions.length; j++) {
@@ -15,13 +18,8 @@ function main(regions, jsonData) {
         region.mouseout(function (e) {
             this.node.style.opacity = 1;
         });
+        protean(region, redGradient);
     }
-    console.log(sum)
-}
-
-function normalize(regions, jsonData) {
-    var properties = Object.keys(jsonData[regions[0]]);
-    console.log(properties);
 }
 
 function setInfo(region) {
@@ -30,7 +28,10 @@ function setInfo(region) {
 
 }
 
-function protean(region) {
+function protean(region, colorGradient) {
     var json = region.data('json');
+    var index = Math.round(json.pop_scaled / 0.0625)
+    region.attr('fill', colorGradient[index]);
+    region.attr('stroke', colorGradient[index]);
 
 }
