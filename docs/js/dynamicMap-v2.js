@@ -1,5 +1,6 @@
 function main(regions, jsonData) {
     for (var j = 0; j < regions.length; j++) {
+        console.log(j)
         console.log(svgWrapper);
         console.log(svgDoc);
         /*var region = svgWrapper.getElementById(regions[j]);
