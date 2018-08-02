@@ -10,12 +10,16 @@ function main(regions, jsonData) {
             this.node.style.opacity = 0.65;
             setInfo(this);
             $(".info").css({
+                "display": "block" ,
                 "width": 'auto'
             });
         });
 
         region.mouseout(function (e) {
             this.node.style.opacity = 1;
+            $(".info").css({
+                "display": "hidden"
+            });
         });
         protean(region, redGradient);
     }
