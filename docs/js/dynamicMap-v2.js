@@ -3,15 +3,12 @@ function main(regions, jsonData) {
         console.log(j)
         var region = svgDoc.getElementById(regions[j]);
         console.log(region);
-        /*var region = svgWrapper.getElementById(regions[j]);
-        console.log(region);
         region.mouseover(function (e) {
-            
-            node.style.opacity = 0.65;
+            this.node.style.opacity = 0.65;
             setInfo(this, jsonData);
         });
 
-        regions[j].mouseout(function (e) {
+        /*regions[j].mouseout(function (e) {
             this.node.style.opacity = 1;
             $(".info").css({
                 "width": "auto"
