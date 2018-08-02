@@ -1,13 +1,14 @@
 function main(regions, jsonData) {
     for (var j = 0; j < regions.length; j++) {
         console.log(j)
-        var region = svgDoc.getElementById(regions[j]);
-        /*region.mouseover(function (e) {
+        var region = canvas.select('#' + regions[j]);
+        
+        region.mouseover(function (e) {
             this.node.style.opacity = 0.65;
             setInfo(this, jsonData);
         });
 
-        regions[j].mouseout(function (e) {
+        /*regions[j].mouseout(function (e) {
             this.node.style.opacity = 1;
             $(".info").css({
                 "width": "auto"
