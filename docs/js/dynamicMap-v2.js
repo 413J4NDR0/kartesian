@@ -17,9 +17,7 @@ function main(regions, jsonData) {
 
         region.mouseout(function (e) {
             this.node.style.opacity = 1;
-            $(".info").css({
-                "display": "none !important"
-            });
+            $(".info").removeAttr('style');
         });
         protean(region, redGradient);
     }
