@@ -86,5 +86,5 @@ from{opacity:0}
 to{opacity:1}
 }
 #map-wrapper * {width: inherit;}
-.info {position: absolute;top: 17%;background-color: #2f3f4f;border-radius: 10px;margin-left: 3.5%;}
+.info {position: absolute;top: 17%;background-color: #2f3f4f;border-radius: 10px;margin-left: 3.5%; min-width: 5%; width: fit-content}
 .info h3, p {margin-left: 5%;margin-right: 5%;}
