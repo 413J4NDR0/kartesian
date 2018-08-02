@@ -3,7 +3,7 @@ function main(regions, jsonData) {
         console.log(j)
         var region = svgDoc.getElementById(regions[j]);
         var r = $('#'+regions[j]);
-        console.log(r);
+        console.log(r[0]);
         region.mouseover(function (e) {
             this.node.style.opacity = 0.65;
             setInfo(this, jsonData);
