@@ -1,11 +1,9 @@
 function main(regions, jsonData) {
-    var sum = 0;
+    normalize(regions, jsonData);
     for (var j = 0; j < regions.length; j++) {
-        console.log(j)
         var entity = regions[j];
         var region = canvas.select('#' + entity);
         region.data('json', jsonData[entity]);
-        sum += jsonData[entity].pop_prewar - jsonData[entity].pop_2018;
         region.mouseover(function (e) {
             this.node.style.opacity = 0.65;
             setInfo(this);
@@ -21,8 +19,18 @@ function main(regions, jsonData) {
     console.log(sum)
 }
 
+function normalize(regions, jsonData) {
+    var properties = Object.keys(jsonData[regions[0]]);
+    console.log(properties);
+}
+
 function setInfo(region) {
     var json = region.data('json');
     document.getElementById('entity-name').innerHTML = json.entity;
+
+}
+
+function protean(region) {
+    var json = region.data('json');
 
 }
