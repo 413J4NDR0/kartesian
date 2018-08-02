@@ -8,7 +8,7 @@ function main(regions, jsonData) {
             setInfo(this, jsonData);
         });
 
-        regions[j].mouseout(function (e) {
+        region.mouseout(function (e) {
             this.node.style.opacity = 1;
         });
     }
