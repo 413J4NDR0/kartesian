@@ -8,6 +8,7 @@
     <link rel="icon" href="map.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title>DynamicMap</title>
+    <script src="js/snap.svg-min.js"></script>
 </head>
 <body>
     <div class="navbar" id="navbar1" >
@@ -18,13 +19,16 @@
         <a href="https://ortega-alejandro.github.io/projects.html">Other Projects</a>
         <a href="javascript:void(0);" class="icon" onclick="menu()"><i class="fas fa-bars"></i></a>
     </div>
-    <div class="col-12" style="background-color: #6c6c71; min-height: 95vh">
-        <h1 style="color: white">DynamicMap Example</h1>
+    <div class="col-12" style="background-color: #6c6c71; color: white;">
+        <h1 >DynamicMap</h1>
+        <div class="center" id="map-wrapper" style="width: 45vw">
+            <object type="image/svg+xml" data="img/syria.svg"></object>
+        </div>
     </div>
     <div class="footer col-12" style="padding:unset">
         <div class="col-12" style="padding-top: 1.5%; padding-bottom: 3%">
             <div class="col-5"> 
-                <h2 style="padding-left: unset">Follow Me</h2>
+                <h2 style="padding-left: unset">Profiles</h2>
                 <h3 style="padding-left: 1%">
                     <a href="https://github.com/ortega-alejandro" target="_blank" style="color: white; text-decoration: none">
                         <i class="fab fa-github fa-2x"></i>
@@ -41,14 +45,29 @@
             </div>
             <div class="col-7">
                 <h2 style="padding-left: unset">Contact</h2>
-                <h3 style="margin-bottom: 1% !important; padding-left: unset"><i class="far fa-envelope"></i> Email</h3>
-                <a style="color: white; text-decoration: none" href="mailto:ortegaalejandro55@gmail.com">ortegaalejandro55@gmail.com </a>
+                <i class="fab fa-google"></i><b style="font-family: Helvetica, sans-serif">mail</b>: ortegaalejandro55
             </div>
         </div>
         <div class="col-12" >
             <div class="center" >&copy; Alejandro Ortega, 2018. All Rights Reserved</div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+    
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBk9XcRfMEQVqFV3PJCchENYjwS9K4Lom8",
+        authDomain: "dynamicmap-1f91d.firebaseapp.com",
+        databaseURL: "https://dynamicmap-1f91d.firebaseio.com",
+        projectId: "dynamicmap-1f91d",
+        storageBucket: "dynamicmap-1f91d.appspot.com",
+        messagingSenderId: "34590528788"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="js/setup.js"></script>
     <script>
         function menu() {
             var x = document.getElementById("navbar1");
@@ -59,7 +78,6 @@
             }
         }
     </script>
-    
     
 </body>
 </html>
