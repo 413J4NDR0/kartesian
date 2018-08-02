@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title>DynamicMap</title>
     <script src="js/snap.svg-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="navbar" id="navbar1" >
@@ -22,7 +23,11 @@
     <div class="col-12" style="background-color: #6c6c71; color: white;">
         <h1 >DynamicMap</h1>
         <div class="center" id="map-wrapper" style="width: 45vw">
-            <object type="image/svg+xml" data="img/syria.svg"></object>
+            <object type="image/svg+xml" data="img/syria.svg" id='svg'></object>
+            <div class="info">
+                <h3 id="entity-name"></h3>
+                <p id="rs"></p>
+            </div>
         </div>
     </div>
     <div class="footer col-12" style="padding:unset">
@@ -54,20 +59,23 @@
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
-    
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBk9XcRfMEQVqFV3PJCchENYjwS9K4Lom8",
-        authDomain: "dynamicmap-1f91d.firebaseapp.com",
-        databaseURL: "https://dynamicmap-1f91d.firebaseio.com",
-        projectId: "dynamicmap-1f91d",
-        storageBucket: "dynamicmap-1f91d.appspot.com",
-        messagingSenderId: "34590528788"
-    };
-    firebase.initializeApp(config);
-    </script>
     <script src="js/setup.js"></script>
+    <script src="js/dynamicMap-v2.js"></script>
+    <script>
+        var svgWrapper = document.getElementById("svg");
+        svgWrapper.addEventListener('load', function(){
+            var svgDoc = svgWrapper.contentDocument;
+            console.log(svgWrapper);
+            console.log(svgDoc);
+        });
+
+        getData('syria').then(function(data){
+            console.log(data);
+            regions = Object.keys(data);
+            console.log(regions);
+            main(regions, data);
+        });
+    </script>
     <script>
         function menu() {
             var x = document.getElementById("navbar1");

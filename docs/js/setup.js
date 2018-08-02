@@ -1,9 +1,20 @@
+var config = {
+    apiKey: "AIzaSyBk9XcRfMEQVqFV3PJCchENYjwS9K4Lom8",
+    authDomain: "dynamicmap-1f91d.firebaseapp.com",
+    databaseURL: "https://dynamicmap-1f91d.firebaseio.com",
+    projectId: "dynamicmap-1f91d",
+    storageBucket: "dynamicmap-1f91d.appspot.com",
+    messagingSenderId: "34590528788"
+};
+firebase.initializeApp(config);
+
 var database = firebase.database();
-var syriaData;
-database.ref().on("value", function(current){
-    syriaData = current.val();
-    console.log(syriaData.syria);
-    console.log(typeof(syriaData));
-}, function (error) {
-    console.log("Error: " + error.code);
-})
+function getData(country) {
+        return database.ref('/'+ country).once("value").then(function(current){
+            var promise;
+            var country = current.val();
+            return Promise.resolve(country);
+    }, function (error) {
+        console.log("Error: " + error.code);
+    })
+}
