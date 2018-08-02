@@ -2,7 +2,6 @@ var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c09
 '#932424', '#9f3c3c', '#ab5454', '#b76d6d', '#c38585', '#cf9d9d', '#dbb6b6', '#e7cece', '#e7cece'];
 
 function main(regions, jsonData) {
-    normalize(regions, jsonData);
     for (var j = 0; j < regions.length; j++) {
         var entity = regions[j];
         var region = canvas.select('#' + entity);
