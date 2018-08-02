@@ -30,8 +30,6 @@ function setInfo(region) {
 function protean(region, colorGradient) {
     var json = region.data('json');
     var index = Math.round(json.pop_scaled / 0.0625);
-    console.log(colorGradient[index]);
-    region.attr('fill', 'red');
-    region.attr('stroke', colorGradient[index]);
-    console.log(region.attr('fill'));
+    region.node.style.fill = colorGradient[index];
+    region.node.style.stroke = colorGradient[index];
 }
