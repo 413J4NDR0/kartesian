@@ -3,10 +3,11 @@ function main(regions, jsonData) {
         console.log(j)
         var entity = regions[j];
         var region = canvas.select('#' + entity);
-        
+        region.data('json', jsonData[entity]);
+        region.data('entity', entity);
         region.mouseover(function (e) {
             this.node.style.opacity = 0.65;
-            setInfo(entity, jsonData);
+            setInfo(this);
         });
 
         region.mouseout(function (e) {
@@ -16,7 +17,6 @@ function main(regions, jsonData) {
 
 }
 
-function setInfo(region, jsonData) {
-    console.log(jsonData[region].entity)
-    document.getElementById('entity-name').innerHTML = jsonData[region].entity;
+function setInfo(region) {
+    document.getElementById('entity-name').innerHTML = region.data('entity');
 }
