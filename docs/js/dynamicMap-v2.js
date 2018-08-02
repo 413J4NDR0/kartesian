@@ -1,8 +1,8 @@
 function main(regions, jsonData) {
     for (var j = 0; j < regions.length; j++) {
         console.log(j)
-        console.log(svgWrapper);
-        console.log(svgDoc);
+        var region = svgDoc.getElementById(regions[j]);
+        console.log(region);
         /*var region = svgWrapper.getElementById(regions[j]);
         console.log(region);
         region.mouseover(function (e) {
