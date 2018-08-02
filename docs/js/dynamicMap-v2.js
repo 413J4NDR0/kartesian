@@ -7,6 +7,9 @@ function main(regions, jsonData) {
         region.mouseover(function (e) {
             this.node.style.opacity = 0.65;
             setInfo(this);
+            $(".info").css({
+                "width": 'auto'
+            });
         });
 
         region.mouseout(function (e) {
