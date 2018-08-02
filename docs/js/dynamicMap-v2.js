@@ -8,14 +8,9 @@ function main(regions, jsonData) {
             setInfo(this, jsonData);
         });
 
-        /*regions[j].mouseout(function (e) {
+        regions[j].mouseout(function (e) {
             this.node.style.opacity = 1;
-            $(".info").css({
-                "width": "auto"
-            });
-            document.getElementById('cn').innerHTML = "";
-            document.getElementById('rs').innerHTML = "";
-        });*/
+        });
     }
 
 }
