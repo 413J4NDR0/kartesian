@@ -9,8 +9,9 @@ h2, h1, h3{padding-left:7.5%}
 .post-card{width: 100% !important}
 .text{font-size: .75rem !important}
 body, .navbar a {font-size: .75rem !important}
-.info {top: unset !important; position: unset !important; }
+#map-wrapper {float: right;}
 .logo,#syria{display:none}
+.info {top: 20% !important;}
 .backgroundImage{height: 300px !important; min-height: unset !important}
 div.footer,div.info{font-size: .75rem !important}
 div.footer a{font-size: .63rem !important;}
@@ -89,4 +90,4 @@ to{opacity:1}
 #map-wrapper * {width: inherit;}
 .info {position: absolute;top: 25%;background-color: #2f3f4f;border-radius: 10px;margin-left: 7.5%;padding-left: 3%; padding-right: 3%;display: none;width: fit-content;}
 .info h3 {white-space:nowrap; overflow:hidden;text-overflow:ellipsis;padding: unset}
-#canvas {min-height: 90vh;background-color: #6c6c71; color: white;}
+#canvas {background-color: #6c6c71; color: white;}
