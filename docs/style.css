@@ -9,7 +9,7 @@ h2, h1, h3{padding-left:7.5%}
 .post-card{width: 100% !important}
 .text{font-size: .75rem !important}
 body, .navbar a {font-size: .75rem !important}
-.info {position: unset !important; padding: 3%}
+.info {position: unset !important; padding-top: 1%; padding-bottom: 1%}
 .logo,#syria{display:none}
 .backgroundImage{height: 300px !important; min-height: unset !important}
 div.footer,div.info{font-size: .75rem !important}
