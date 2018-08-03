@@ -10,7 +10,7 @@ h2, h1, h3{padding-left:7.5%}
 .text{font-size: .75rem !important}
 body, .navbar a {font-size: .75rem !important}
 .info {top: 30%; }
-#map-wrapper{width: 95%}
+#map-wrapper{float: right;}
 .logo,#syria{display:none}
 .backgroundImage{height: 300px !important; min-height: unset !important}
 div.footer,div.info{font-size: .75rem !important}
