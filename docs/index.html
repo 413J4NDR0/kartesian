@@ -62,23 +62,8 @@
     <script src="js/setup.js"></script>
     <script src="js/dynamicMap-v2.js"></script>
     <script>
-        var svgWrapper = document.getElementById("svg");
-        var svgDoc;
-        var canvas;
-        svgWrapper.addEventListener('load', function(){
-            svgDoc = svgWrapper.contentDocument;
-            canvas = Snap(svgDoc);
-            console.log(svgWrapper);
-            console.log(svgDoc);
-            console.log(canvas);
-        });
-
-        getData('mexico').then(function(data){
-            console.log(data);
-            regions = Object.keys(data);
-            console.log(regions);
-            main(regions, data);
-        });
+        
+        DynamicMap("mexico");
     </script>
     <script>
         function menu() {

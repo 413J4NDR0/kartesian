@@ -18,3 +18,14 @@ function getData(country) {
         console.log("Error: " + error.code);
     })
 }
+
+var svgWrapper = document.getElementById("svg");
+var svgDoc;
+var canvas;
+svgWrapper.addEventListener('load', function(){
+    svgDoc = svgWrapper.contentDocument;
+    canvas = Snap(svgDoc);
+    console.log(svgWrapper);
+    console.log(svgDoc);
+    console.log(canvas);
+});
