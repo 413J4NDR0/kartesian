@@ -17,7 +17,3 @@ function getData(country) {
         console.log("Error: " + error.code);
     })
 }
-
-var svgWrapper;
-var svgDoc;
-var canvas;

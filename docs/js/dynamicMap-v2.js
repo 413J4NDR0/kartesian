@@ -2,18 +2,19 @@ var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c09
 '#932424', '#9f3c3c', '#ab5454', '#b76d6d', '#c38585', '#cf9d9d', '#dbb6b6', '#e7cece', '#e7cece'];
 
 function Dynamap(country) {
-    svgWrapper = document.getElementById("svg");
+    var canvas;
+    var svgWrapper = document.getElementById("svg");
     svgWrapper.addEventListener('load', function(){
-        svgDoc = svgWrapper.contentDocument;
+        var svgDoc = svgWrapper.contentDocument;
         canvas = Snap(svgDoc);
     });
     getData(country).then(function(data){
         var regions = Object.keys(data);
-        main(regions, data);
+        main(regions, data, canvas);
     });
 }
 
-function main(regions, jsonData) {
+function main(regions, jsonData, canvas) {
     for (var j = 0; j < regions.length; j++) {
         var entity = regions[j];
         var region = canvas.select('#' + entity);
