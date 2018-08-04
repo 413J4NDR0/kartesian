@@ -17,10 +17,8 @@ function Dynamap(country) {
 function main(regions, jsonData, canvas) {
     for (var j = 0; j < regions.length; j++) {
         var entity = regions[j];
+        console.log(canvas);
         var region = canvas.select('#' + entity);
-        console.log(entity)
-        console.log(region)
-        console.log(jsonData)
         region.data('json', jsonData[entity]);
         region.mouseover(function (e) {
             this.node.style.opacity = 0.65;
