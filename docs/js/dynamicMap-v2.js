@@ -4,9 +4,12 @@ var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c09
 function Dynamap(country) {
     var canvas;
     var svgWrapper = document.getElementById("svg");
+    console.log(svgWrapper);
     svgWrapper.addEventListener('load', function(){
         var svgDoc = svgWrapper.contentDocument;
+        console.log(svgDoc);
         canvas = Snap(svgDoc);
+        console.log(canvas);
     });
     getData(country).then(function(data){
         var regions = Object.keys(data);
