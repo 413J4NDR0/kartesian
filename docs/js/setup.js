@@ -22,6 +22,7 @@ function getData(country) {
 var svgWrapper = document.getElementById("svg");
 var svgDoc;
 var canvas;
+
 svgWrapper.addEventListener('load', function(){
     svgDoc = svgWrapper.contentDocument;
     canvas = Snap(svgDoc);

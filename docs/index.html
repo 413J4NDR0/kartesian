@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="map.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <title>DynamicMap</title>
+    <title>Dynamap!</title>
     <script src="js/snap.svg-min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -21,8 +21,16 @@
         <a href="javascript:void(0);" class="icon" onclick="menu()"><i class="fas fa-bars"></i></a>
     </div>
     <div class="col-12" id="canvas">
-        <h1 >DynamicMap</h1>
-        <div class="center" id="map-wrapper" style="width: 50vw; max-height: 85vh">
+        <h1 >Dynamap!</h1>
+        <div id="changeMap" class="dropdown">
+            <div class="dropWrap">View Country</div>
+            <div class="dropdown-content">
+                <a id="mexico" href="#">M&eacute;xico</a>
+                <a id="syria"  href="#">Sūriyā</a>
+                <a id="vietnam" href="#">Việt Nam</a>
+            </div>
+        </div>
+        <div class="center" id="map-wrapper" style="width: 50vw; max-height: 75vh">
             <object type="image/svg+xml" data="img/mexico.svg" id='svg' style="max-height: inherit"></object>
         </div>
         <div class="info">
@@ -62,8 +70,7 @@
     <script src="js/setup.js"></script>
     <script src="js/dynamicMap-v2.js"></script>
     <script>
-        
-        DynamicMap("mexico");
+        Dynamap("mexico");
     </script>
     <script>
         function menu() {
