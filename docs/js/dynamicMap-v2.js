@@ -2,6 +2,14 @@ var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c09
 '#932424', '#9f3c3c', '#ab5454', '#b76d6d', '#c38585', '#cf9d9d', '#dbb6b6', '#e7cece', '#e7cece'];
 
 function Dynamap(country) {
+    svgWrapper = document.getElementById("svg");
+    svgWrapper.addEventListener('load', function(){
+        svgDoc = svgWrapper.contentDocument;
+        canvas = Snap(svgDoc);
+        console.log(svgWrapper);
+        console.log(svgDoc);
+        console.log(canvas);
+    });
     getData(country).then(function(data){
         console.log(data);
         regions = Object.keys(data);
@@ -49,14 +57,6 @@ $("#vietnam").click(function () {
     $("#svg").remove();
     var svg_layout = '<object type="image/svg+xml" data="img/vietnam.svg" id="svg" style="max-height: inherit"></object>'; 
     $('#map-wrapper').prepend(svg_layout);
-    svgWrapper = document.getElementById("svg");
-    svgWrapper.addEventListener('load', function(){
-        svgDoc = svgWrapper.contentDocument;
-        canvas = Snap(svgDoc);
-        console.log(svgWrapper);
-        console.log(svgDoc);
-        console.log(canvas);
-    });
     Dynamap("vietnam");
 });
 
@@ -65,14 +65,6 @@ $("#mexico").click(function () {
     $("#svg").remove();
     var svg_layout = '<object type="image/svg+xml" data="img/mexico.svg" id="svg" style="max-height: inherit"></object>'; 
     $('#map-wrapper').prepend(svg_layout);
-    svgWrapper = document.getElementById("svg");
-    svgWrapper.addEventListener('load', function(){
-        svgDoc = svgWrapper.contentDocument;
-        canvas = Snap(svgDoc);
-        console.log(svgWrapper);
-        console.log(svgDoc);
-        console.log(canvas);
-    });
     Dynamap("mexico");
 });
 
@@ -80,13 +72,5 @@ $("#syria").click(function () {
     $("#svg").remove();
     var svg_layout = '<object type="image/svg+xml" data="img/syria.svg" id="svg" style="max-height: inherit"></object>'; 
     $('#map-wrapper').prepend(svg_layout);
-    svgWrapper = document.getElementById("svg");
-    svgWrapper.addEventListener('load', function(){
-        svgDoc = svgWrapper.contentDocument;
-        canvas = Snap(svgDoc);
-        console.log(svgWrapper);
-        console.log(svgDoc);
-        console.log(canvas);
-    });
     Dynamap("syria");
 });

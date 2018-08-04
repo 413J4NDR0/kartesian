@@ -11,7 +11,6 @@ firebase.initializeApp(config);
 var database = firebase.database();
 function getData(country) {
         return database.ref('/'+ country).once("value").then(function(current){
-            var promise;
             var country = current.val();
             return Promise.resolve(country);
     }, function (error) {
@@ -19,14 +18,6 @@ function getData(country) {
     })
 }
 
-var svgWrapper = document.getElementById("svg");
+var svgWrapper;
 var svgDoc;
 var canvas;
-
-svgWrapper.addEventListener('load', function(){
-    svgDoc = svgWrapper.contentDocument;
-    canvas = Snap(svgDoc);
-    console.log(svgWrapper);
-    console.log(svgDoc);
-    console.log(canvas);
-});
