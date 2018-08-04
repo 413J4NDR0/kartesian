@@ -8,7 +8,7 @@ function Dynamap(country) {
         canvas = Snap(svgDoc);
     });
     getData(country).then(function(data){
-        regions = Object.keys(data);
+        var regions = Object.keys(data);
         main(regions, data);
     });
 }

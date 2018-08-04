@@ -11,8 +11,8 @@ firebase.initializeApp(config);
 var database = firebase.database();
 function getData(country) {
         return database.ref('/'+ country).once("value").then(function(current){
-            var country = current.val();
-            return Promise.resolve(country);
+            var data = current.val();
+            return Promise.resolve(data);
     }, function (error) {
         console.log("Error: " + error.code);
     })
