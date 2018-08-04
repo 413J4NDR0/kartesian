@@ -15,9 +15,9 @@ function Dynamap(country) {
 }
 
 function main(regions, jsonData, canvas) {
+    console.log(canvas);
     for (var j = 0; j < regions.length; j++) {
         var entity = regions[j];
-        console.log(canvas);
         var region = canvas.select('#' + entity);
         region.data('json', jsonData[entity]);
         region.mouseover(function (e) {
