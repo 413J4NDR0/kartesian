@@ -7,9 +7,9 @@
 			{
 				fill: black;
 				fill-opacity: 1;
-				stroke:#6c6c71;
+				stroke:black;
 				stroke-opacity: 1;
-				stroke-width: 0;
+				stroke-width: 1;
 			}
 		</style>
 
