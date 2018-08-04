@@ -7,13 +7,11 @@ function Dynamap(country) {
     console.log(svgWrapper);
     svgWrapper.addEventListener('load', function(){
         var svgDoc = svgWrapper.contentDocument;
-        console.log(svgDoc);
         canvas = Snap(svgDoc);
-        console.log(canvas);
-    });
-    getData(country).then(function(data){
-        var regions = Object.keys(data);
-        main(regions, data, canvas);
+        getData(country).then(function(data){
+            var regions = Object.keys(data);
+            main(regions, data, canvas);
+        });
     });
 }
 
