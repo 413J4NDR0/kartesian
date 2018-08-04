@@ -22,8 +22,8 @@
     </div>
     <div class="col-12" id="canvas">
         <h1 >DynamicMap</h1>
-        <div class="center" id="map-wrapper" style="width: 45vw">
-            <object type="image/svg+xml" data="img/syria.svg" id='svg'></object>
+        <div class="center" id="map-wrapper" style="width: 50vw; max-height: 85vh">
+            <object type="image/svg+xml" data="img/vietnam.svg" id='svg' style="max-height: inherit"></object>
         </div>
         <div class="info">
             <h3 id="entity-name"></h3>
@@ -73,7 +73,7 @@
             console.log(canvas);
         });
 
-        getData('syria').then(function(data){
+        getData('vietnam').then(function(data){
             console.log(data);
             regions = Object.keys(data);
             console.log(regions);
