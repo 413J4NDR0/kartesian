@@ -6,14 +6,9 @@ function Dynamap(country) {
     svgWrapper.addEventListener('load', function(){
         svgDoc = svgWrapper.contentDocument;
         canvas = Snap(svgDoc);
-        console.log(svgWrapper);
-        console.log(svgDoc);
-        console.log(canvas);
     });
     getData(country).then(function(data){
-        console.log(data);
         regions = Object.keys(data);
-        console.log(regions);
         main(regions, data);
     });
 }
