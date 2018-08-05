@@ -1,4 +1,4 @@
-# CorMap
+# Kartesian
 
 This library is an extension of the work I did for a 2017 Information Initiative @ Duke summer project analyzing the dissemination of Syrian Refugee photographs by media outlets. One of the end results were data visualizations I programmed myself in JavaScript using Raphaël JS as an SVG handler, Velocity.js for animations, and the ubiquitous JQuery, including interactive SVG maps that could 
 
