@@ -39,7 +39,7 @@ function main(regions, jsonData, jsonMeta, canvas) {
         });
         protean(region, redGradient);
     }
-    document.getElementById('map-title').innerHTML = jsonMeta.entity;
+    document.getElementById('map-title').innerHTML = jsonMeta.entity + " " + jsonMeta.pop;
 }
 
 function setInfo(region, jsonMeta) {
