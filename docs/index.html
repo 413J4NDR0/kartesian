@@ -21,21 +21,22 @@
         <a href="javascript:void(0);" class="icon" onclick="menu()"><i class="fas fa-bars"></i></a>
     </div>
     <div class="col-12" id="canvas">
-        <h1 >CorMap</h1>
-        <div id="changeMap" class="dropdown">
+        <h1 style="display: inline-block;" id="map-title"></h1>
+        <span id="changeMap" class="dropdown">
             <div class="dropWrap">View Country</div>
             <div class="dropdown-content">
-                <a id="mexico" href="#">M&eacute;xico</a>
-                <a id="syria"  href="#">Sūriyā</a>
-                <a id="vietnam" href="#">Việt Nam</a>
+                <div id="mexico">M&eacute;xico</div>
+                <div id="syria"  href="#">Sūriyā</div>
+                <div id="vietnam" href="#">Việt Nam</div>
+                <div id="yemen" href="#">al-Yaman</div>
             </div>
-        </div>
+        </span>
         <div class="center" id="map-wrapper" style="width: 50vw; max-height: 75vh">
-            <object type="image/svg+xml" data="img/mexico.svg" id='svg' style="max-height: inherit"></object>
+            
         </div>
-        <div class="info">
+        <div class="info" id="infobox">
             <h3 id="entity-name"></h3>
-            <p id="rs"></p>
+            <div id="pop"></div>
         </div>
     </div>
     <div class="footer col-12" style="padding:unset">
@@ -70,7 +71,7 @@
     <script src="js/setup.js"></script>
     <script src="js/dynamicMap-v2.js"></script>
     <script>
-        Dynamap("mexico");
+        Cormap("yemen");
     </script>
     <script>
         function menu() {

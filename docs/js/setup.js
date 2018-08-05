@@ -9,11 +9,25 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
+
 function getData(country) {
-        return database.ref('/'+ country).once("value").then(function(current){
-            var data = current.val();
-            return Promise.resolve(data);
+    return database.ref('/'+ country).once("value").then(function(current){
+        var data = current.val();
+        return Promise.resolve(data);
     }, function (error) {
         console.log("Error: " + error.code);
     })
+}
+
+function getMetadata(country) {
+    return database.ref('/metadata/' + country).once("value").then(function(current){
+        var data = current.val();
+        return Promise.resolve(data);
+    }, function (error) {
+        console.log("Error: " + error.code);
+    })
+}
+
+function commafy(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

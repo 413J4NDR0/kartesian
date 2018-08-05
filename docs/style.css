@@ -9,7 +9,7 @@ h2, h1, h3{padding-left:7.5%}
 .post-card{width: 100% !important}
 .text{font-size: .75rem !important}
 body, .navbar a {font-size: .75rem !important}
-#map-wrapper {float: right;}
+#map-wrapper {width: 100% !important;max-width: auto; max-height: 100vh;}
 .logo {display: none !important;}
 #canvas {height: unset !important;}
 .info {top: 20% !important;}
@@ -61,10 +61,10 @@ blockquote.text{font-size:24px}
 .navbar div{font-size:17px}
 .dropdown .dropWrap{border:none;outline:0;padding:14px 16px;background-color:#393949;color:#fff;font-size:16px;border:none;cursor:pointer}
 .dropdown{float:left;overflow:hidden}
-#changeMap { float: right;padding-right: 5%}
+#changeMap { float: right;padding-right: 5%; -webkit-margin-before: 0.67rem;-webkit-margin-after: 0.67rem;}
 .dropdown-content{display:none;position:absolute;background-color:#f9f9f9;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:1}
-.dropdown-content a{float:none;font-size:16px;color:#000;padding:8px 12px;text-decoration:none;display:block;text-align:left}
-.dropdown-content a:hover{background-color:#f1f1f1}
+.dropdown-content div{float:none;font-size:16px;color:#000;padding:8px 12px;text-decoration:none;display:block;text-align:left}
+.dropdown-content div:hover{background-color:#f1f1f1; cursor: pointer;}
 .dropdown:hover .dropdown-content{display:block}
 .backgroundImage{background-image:url(img/background/laborDeReyes.jpg);height:95vh;background-position:50% 55%;background-repeat:no-repeat;background-size:cover;box-shadow:0 6px 12px 0 rgba(0,0,0,.4);-webkit-animation-name:fade;-webkit-animation-duration:1.5s;animation-name:fade;animation-duration:1.5s;}
 .text{text-align:justify;padding-left:10%;padding-right:10%;line-height:150%;font-size:1rem; margin-top: 1.25%;}
@@ -90,7 +90,7 @@ from{opacity:0}
 to{opacity:1}
 }
 #map-wrapper * {width: inherit;}
-.info {position: absolute;top: 25%;background-color: #2f3f4f;border-radius: 10px;margin-left: 7.5%;padding-left: 3%; padding-right: 3%;display: none;width: fit-content;}
+.info {position: absolute;top: 25%;background-color: #2f3f4f;border-radius: 10px;padding-left: 3%; padding-right: 3%; padding-bottom: 1.5%;display: none;width: fit-content;}
 .info h3 {white-space:nowrap; overflow:hidden;text-overflow:ellipsis;padding: unset}
 #canvas {background-color: #6c6c71; color: white;height: 100vh}
 #svg {max-height: inherit}
