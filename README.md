@@ -1,2 +1,2 @@
 # Kartesian
-Kartesian is a project for interactive maps emphasizing data visualization and a clean aesthetic. This project is an extension of the JavaScript visualizations I programmed for a project analyzing the Syrian Refugee Crisis, which can be viewed below. Kartesian manipulates SVG representations of countries while accessing a realtime NoSQL database to display information. Currently in the process of adding additional functionality. 
+Kartesian is a project for interactive maps emphasizing data visualization and a clean aesthetic. Kartesian manipulates SVG representations of countries while accessing a realtime NoSQL database to display information. Currently in the process of adding additional functionality. 
