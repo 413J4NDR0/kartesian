@@ -1,7 +1,6 @@
 ﻿body,html{background-color:#fefdfb;margin:0;font-family:Source Sans Pro,Helvetica,sans-serif;color:#000;-webkit-font-smoothing:antialiased;letter-spacing:.1px}
 .link{color:#8b0000;text-decoration:none}
 a {text-decoration: none; color: inherit;}
-h2, h1, h3{padding-left:7.5%}
 .details{padding-left: 7.5%; }
 ::selection{background:#B1B7D1;}
 .post-card:hover{background-color: #8b0000; color: white}
@@ -26,6 +25,7 @@ div.navbar.responsive{position:relative}
 div.navbar.responsive a.icon{position:absolute;right:0;top:0}
 div.navbar.responsive a{float:none;display:block;text-align:left}
 }
+#map-title, #info-box {padding-left: 5%;}
 .container {position: relative;text-align: left;color: white;}
 .name {position: relative;}
 .position {position: relative;top: 7.5%;}
@@ -90,7 +90,7 @@ from{opacity:0}
 to{opacity:1}
 }
 #map-wrapper * {width: inherit;}
-.info {position: absolute;top: 25%;background-color: #2f3f4f;border-radius: 10px;padding-left: 3%; padding-right: 3%; padding-bottom: 1.5%;display: none;width: fit-content;}
+.info {position: absolute;top: 15%;left: 5%; background-color: #2f3f4f;border-radius: 10px;padding-left: 3%; padding-right: 3%; padding-bottom: 1.5%;display: none;width: fit-content;}
 .info h3 {white-space:nowrap; overflow:hidden;text-overflow:ellipsis;padding: unset}
-#canvas {background-color: #6c6c71; color: white;height: 100vh}
+#canvas { position: relative;background-color: #6c6c71; color: white;height: 100vh}
 #svg {max-height: inherit}
