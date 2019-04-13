@@ -8,7 +8,7 @@ a {text-decoration: none; color: inherit;}
 .post-card{width: 100% !important}
 .text{font-size: .75rem !important}
 body, .navbar a {font-size: .75rem !important}
-#map-wrapper {width: 100% !important;max-width: auto; max-height: 100vh;z-index: 1}
+#map-wrapper {width: 100% !important;max-width: auto; max-height: 100vh;}
 .logo {display: none !important;}
 #canvas {height: unset !important;}
 .info {top: 20% !important;}
@@ -90,8 +90,7 @@ from{opacity:0}
 to{opacity:1}
 }
 #map-wrapper * {width: 85vw; max-height: 75vh !important;}
-.info {position: absolute;top: 20%;left: 5%; background-color: #2f3f4f;border-radius: 10px;padding-left: 3%; padding-right: 3%; padding-bottom: 1.5%;display: none;width: fit-content;z-index: 0;}
+.info {position: absolute;top: 20%;left: 5%; background-color: #2f3f4f;border-radius: 10px;padding-left: 3%; padding-right: 3%; padding-bottom: 1.5%;display: none;width: fit-content;}
 .info h3 {white-space:nowrap; overflow:hidden;text-overflow:ellipsis;padding: unset}
-.info * {z-index: 2;}
 #canvas { position: relative;background-color: #6c6c71; color: white;height: 100vh}
 #svg {max-height: inherit}
