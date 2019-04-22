@@ -1,7 +1,7 @@
 var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c0909', '#790a0a', '#870c0c',
 '#932424', '#9f3c3c', '#ab5454', '#b76d6d', '#c38585', '#cf9d9d', '#dbb6b6', '#e7cece', '#e7cece'];
 
-var tealGradient = ['#032828', '#043636', '#064343', '#510707', '#075151', '#096c6c', '#0a7979', '#0c8787',
+var tealGradient = ['#032828', '#043636', '#064343', '#075151', '#085e5e', '#096c6c', '#0a7979', '#0c8787',
 '#249393', '#3c9f9f', '#54abab', '#6db7b7', '#85c3c3', '#9dcfcf', '#b6dbdb', '#cee7e7', '#cee7e7'];
 
 var gradients = new Map([['red' , redGradient], ['teal' , tealGradient]]);
@@ -16,8 +16,8 @@ function Kartesian(country, dataset=country,color="red") {
         canvas = Snap(svgDoc);
         getData(dataset).then(function(data){
             getMetadata(dataset).then(function(metadata){
-                console.log(data);
-                console.log(metadata);
+                //console.log(data);
+                //console.log(metadata);
                 var regions = Object.keys(data);
                 main(regions, data, metadata, canvas, color);
             });
@@ -55,7 +55,6 @@ function setInfo(region, jsonMeta) {
 
 function protean(region, color) {
     var colorGradient = gradients.get(color);
-    console.log(colorGradient);
     var json = region.data('json');
     var index = Math.round(json.pop_scaled / 0.0625);
     region.node.style.fill = colorGradient[index];
