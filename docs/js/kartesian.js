@@ -55,6 +55,7 @@ function setInfo(region, jsonMeta) {
 
 function protean(region, color) {
     var colorGradient = gradients.get(color);
+    console.log(colorGradient);
     var json = region.data('json');
     var index = Math.round(json.pop_scaled / 0.0625);
     region.node.style.fill = colorGradient[index];
