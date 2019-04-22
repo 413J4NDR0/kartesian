@@ -1,8 +1,8 @@
-var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c0909', '#790a0a', '#870c0c', 
+var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c0909', '#790a0a', '#870c0c',
 '#932424', '#9f3c3c', '#ab5454', '#b76d6d', '#c38585', '#cf9d9d', '#dbb6b6', '#e7cece', '#e7cece'];
 
 function Cormap(country) {
-    var svg_layout = '<object type="image/svg+xml" data="img/'+ country + '.svg" id="svg" style="max-height: inherit"></object>'; 
+    var svg_layout = '<object type="image/svg+xml" data="img/'+ country + '.svg" id="svg" style="max-height: inherit"></object>';
     $('#map-wrapper').prepend(svg_layout);
     var canvas;
     var svgWrapper = document.getElementById("svg");

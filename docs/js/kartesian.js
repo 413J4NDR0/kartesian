@@ -1,8 +1,11 @@
-var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c0909', '#790a0a', '#870c0c', 
+var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c0909', '#790a0a', '#870c0c',
 '#932424', '#9f3c3c', '#ab5454', '#b76d6d', '#c38585', '#cf9d9d', '#dbb6b6', '#e7cece', '#e7cece'];
 
-function Kartesian(country, dataset=country) {
-    var svg_layout = '<object type="image/svg+xml" data="img/'+ country + '.svg" id="svg" style="max-height: inherit"></object>'; 
+var blueGradient = ['#032828', '#043636', '#064343', '#510707', '#075151', '#096c6c', '#0a7979', '#0c8787',
+'#249393', '#3c9f9f', '#54abab', '#6db7b7', '#85c3c3', '#9dcfcf', '#b6dbdb', '#cee7e7', '#cee7e7'];
+
+function Kartesian(country, dataset=country,color=redGradient) {
+    var svg_layout = '<object type="image/svg+xml" data="img/'+ country + '.svg" id="svg" style="max-height: inherit"></object>';
     $('#map-wrapper').prepend(svg_layout);
     var canvas;
     var svgWrapper = document.getElementById("svg");
@@ -14,13 +17,13 @@ function Kartesian(country, dataset=country) {
                 console.log(data);
                 console.log(metadata);
                 var regions = Object.keys(data);
-                main(regions, data, metadata, canvas);
+                main(regions, data, metadata, canvas, color);
             });
         });
     });
 }
 
-function main(regions, jsonData, jsonMeta, canvas) {
+function main(regions, jsonData, jsonMeta, canvas, color) {
     for (var j = 0; j < regions.length; j++) {
         var entity = regions[j];
         var region = canvas.select('#' + entity);
@@ -37,7 +40,7 @@ function main(regions, jsonData, jsonMeta, canvas) {
             this.node.style.opacity = 1;
             $(".info").removeAttr('style');
         });
-        protean(region, redGradient);
+        protean(region, color);
     }
     document.getElementById('map-title').innerHTML = jsonMeta.entity + " " + jsonMeta.pop;
 }
