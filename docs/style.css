@@ -4,7 +4,8 @@ a {text-decoration: none; color: inherit;}
 .details{padding-left: 7.5%; }
 ::selection{background:#B1B7D1;}
 .post-card:hover{background-color: #8b0000; color: white}
-@media screen and (max-width:975px){
+@media screen and (max-width:975px)
+{
 .post-card{width: 100% !important}
 .text{font-size: .75rem !important}
 body, .navbar a {font-size: .75rem !important}
@@ -54,7 +55,7 @@ blockquote.text{font-size:24px}
 #bayarea{width:425px}
 .center{margin:auto;display:block;width:fit-content; width: -moz-fit-content}
 .center img{box-shadow:0 6px 12px 0 rgba(0,0,0,.4);border-radius:5px}
-.navbar{overflow:hidden;overflow:hidden;padding-left:5%}
+.navbar{padding-left:5%}
 .logo{float:left;padding:14px 14px}
 .navbar a{float:left;color:#fff;text-align:center;text-decoration:none;padding:14px 16px;font-size:17px}
 .navbar .dropWrap:hover,.navbar a:hover{background-color:#ddd;color:#000}
