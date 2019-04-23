@@ -16,8 +16,8 @@ function Kartesian(country, dataset=country,color="red") {
         canvas = Snap(svgDoc);
         getData(dataset).then(function(data){
             getMetadata(dataset).then(function(metadata){
-                //console.log(data);
-                //console.log(metadata);
+                console.log(data);
+                console.log(metadata);
                 var regions = Object.keys(data);
                 main(regions, data, metadata, canvas, color);
             });
