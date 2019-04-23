@@ -62,7 +62,7 @@ blockquote.text{font-size:24px}
 .navbar div{font-size:17px}
 .dropdown .dropWrap{border:none;outline:0;padding:14px 16px;background-color:#393949;color:#fff;font-size:16px;border:none;cursor:pointer}
 .dropdown{float:left;overflow:hidden}
-#changeMap { float: right;padding-right: 5%; -webkit-margin-before: 0.67rem;-webkit-margin-after: 0.67rem;}
+#changeMap {float: right;margin-right: 5%; -webkit-margin-before: 0.67rem;-webkit-margin-after: 0.67rem; border: 1px solid rgba(255,255,255,.25)}
 .dropdown-content{display:none;position:absolute;background-color:#f9f9f9;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:1}
 .dropdown-content div{float:none;font-size:16px;color:#000;padding:8px 12px;text-decoration:none;display:block;text-align:left}
 .dropdown-content div:hover{background-color:#f1f1f1; cursor: pointer;}
