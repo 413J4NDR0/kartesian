@@ -63,21 +63,21 @@ function protean(region, color) {
 
 $("#vietnam").click(function () {
     $("#svg").remove();
-    Kartesian("vietnam", color='teal');
+    Kartesian("vietnam", "vietnam",'teal');
 });
 
 
 $("#mexico").click(function () {
     $("#svg").remove();
-    Kartesian("mexico", color='teal');
+    Kartesian("mexico", "mexico", 'teal');
 });
 
 $("#syria").click(function () {
     $("#svg").remove();
-    Kartesian("syria", color='teal');
+    Kartesian("syria", "syria", 'teal');
 });
 
 $("#yemen").click(function () {
     $("#svg").remove();
-    Kartesian("yemen", color='teal');
+    Kartesian("yemen", "yemen", 'teal');
 });
