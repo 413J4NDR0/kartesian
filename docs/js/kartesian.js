@@ -4,8 +4,8 @@ var redGradient = ['#280303', '#360404', '#430606', '#510707', '#5e0808', '#6c09
 var tealGradient = ['#032828', '#043636', '#064343', '#075151', '#085e5e', '#096c6c', '#0a7979', '#0c8787',
 '#249393', '#3c9f9f', '#54abab', '#6db7b7', '#85c3c3', '#9dcfcf', '#b6dbdb', '#cee7e7', '#cee7e7'];
 
-var greyGradient = ['#0e0e0e', '#131313', '#181818', '#1D1D1D', '#222222', '#272727', '#2B2B2B', '#313131',
-'#454545', '#5A5A5A', '#6E6E6E', '#838383', '#989898', '#ACACAC', '#C1C1C1', '#D5D5D5', '#D5D5D5'];
+var greyGradient = ['#1e1e1e', '#232323', '#282828', '#2D2D2D', '#323232', '#373737', '#3B3B3B', '#414141',
+'#555555', '#6A6A6A', '#7E7E7E', '#939393', '#a8a8a8', '#bCbCbC', '#d1d1d1', '#e5e5e5', '#e5e5e5'];
 
 var gradients = new Map([['red' , redGradient], ['teal' , tealGradient], ['grey', greyGradient], ['gray', greyGradient]]);
 
