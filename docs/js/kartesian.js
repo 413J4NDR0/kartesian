@@ -48,6 +48,7 @@ function main(regions, jsonData, jsonMeta, canvas, color,outline,outlinecolor) {
         protean(region, color,outline,outlinecolor);
     }
     document.getElementById('map-title').innerHTML = jsonMeta.entity + " " + jsonMeta.pop;
+    $(".land").css("stroke", outlinecolor);
 }
 
 function setInfo(region, jsonMeta) {
