@@ -9,7 +9,7 @@ var greyGradient = ['#1e1e1e', '#232323', '#282828', '#2D2D2D', '#323232', '#373
 
 var gradients = new Map([['red' , redGradient], ['teal' , tealGradient], ['grey', greyGradient], ['gray', greyGradient]]);
 
-function Kartesian(country, dataset=country,color="red") {
+function Kartesian(country, dataset=country,color="red", outline=false, outlinecolor="#fff") {
     var svg_layout = '<object type="image/svg+xml" data="img/'+ country + '.svg" id="svg" style="max-height: inherit"></object>';
     $('#map-wrapper').prepend(svg_layout);
     var canvas;
@@ -22,13 +22,13 @@ function Kartesian(country, dataset=country,color="red") {
                 console.log(data);
                 console.log(metadata);
                 var regions = Object.keys(data);
-                main(regions, data, metadata, canvas, color);
+                main(regions, data, metadata, canvas, color,outline,outlinecolor);
             });
         });
     });
 }
 
-function main(regions, jsonData, jsonMeta, canvas, color) {
+function main(regions, jsonData, jsonMeta, canvas, color,outline,outlinecolor) {
     for (var j = 0; j < regions.length; j++) {
         var entity = regions[j];
         var region = canvas.select('#' + entity);
@@ -45,7 +45,7 @@ function main(regions, jsonData, jsonMeta, canvas, color) {
             this.node.style.opacity = 1;
             $(".info").removeAttr('style');
         });
-        protean(region, color);
+        protean(region, color,outline,outlinecolor);
     }
     document.getElementById('map-title').innerHTML = jsonMeta.entity + " " + jsonMeta.pop;
 }
@@ -56,12 +56,15 @@ function setInfo(region, jsonMeta) {
     document.getElementById('pop').innerHTML = jsonMeta.pop + ': ' + commafy(json.pop) ;
 }
 
-function protean(region, color) {
+function protean(region, color,outline,outlinecolor) {
     var colorGradient = gradients.get(color);
     var json = region.data('json');
     var index = Math.round(json.pop_scaled / 0.0625);
     region.node.style.fill = colorGradient[index];
     region.node.style.stroke = colorGradient[index];
+    if (outline) {
+        region.node.style.stroke = outlinecolor;
+    }
 }
 
 $("#vietnam").click(function () {
