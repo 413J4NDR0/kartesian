@@ -70,13 +70,13 @@ function protean(region, color,outline,outlinecolor) {
 
 $("#vietnam").click(function () {
     $("#svg").remove();
-    Kartesian("vietnam", "vietnam",'teal');
+    Kartesian("vietnam", "vietnam",'red');
 });
 
 
 $("#mexico").click(function () {
     $("#svg").remove();
-    Kartesian("mexico", "mexico", 'teal');
+    Kartesian("mexico", "mexico", 'red');
 });
 
 $("#syria").click(function () {
@@ -86,5 +86,5 @@ $("#syria").click(function () {
 
 $("#yemen").click(function () {
     $("#svg").remove();
-    Kartesian("yemen", "yemen", 'teal');
+    Kartesian("yemen", "yemen", 'grey');
 });
