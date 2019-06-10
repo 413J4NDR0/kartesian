@@ -95,3 +95,4 @@ to{opacity:1}
 .info h3 {white-space:nowrap; overflow:hidden;text-overflow:ellipsis;padding: unset}
 #canvas { position: relative; color: white;height: 100vh}
 #svg {max-height: inherit}
+.fa-3x:hover {color: #00539B}
